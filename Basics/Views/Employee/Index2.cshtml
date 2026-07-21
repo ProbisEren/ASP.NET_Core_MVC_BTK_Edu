@@ -1,0 +1,13 @@
+@model String[]
+<div class="div">
+    <h3 class="display-6">
+        Index 2
+    </h3>
+    <div class="lead">
+        @foreach(string name in Model){
+
+            <p>@name</p>
+        }
+        <!--sadece bu şekilde(@Model) model yazdığında bile yukarda model tanımlasan da tanımlamasan da bu view e gönderilen şey neyse onun toString'ini yazar @Model -->
+    </div>
+</div>
