@@ -3,6 +3,19 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">BTK AKADEMI </h1>
+    <p>
+        
+        
+        <a class="btn btn-primary" asp-controller="Course" asp-action="Apply"> Apply</a> 
+
+        <!--- 
+        <a class="btn btn-primary" href="Course/Apply"> Apply</a> 
+        Buradaki "Course" yazısı case sensitive değil "course" veya "COURSE"
+        olsa dahi çalışır-->
+        <!---
+        <a class="btn btn-primary" href="Course/Apply"> Apply</a> 
+        bunu böyle kullanmak önerilmez, 10. satırdaki hali gibi olsun -> asp-controller = bu haliyle kullan
+        -->
+    </p>
 </div>
