@@ -7,7 +7,8 @@ namespace BtkAkademiProje.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = Repository.Applications;
+            return View(model);
         }
         public IActionResult Apply() // get için çalışan metot
         {
@@ -26,9 +27,16 @@ namespace BtkAkademiProje.Controllers
         // post  için çalışan metot
         public IActionResult Apply([FromForm]Candidate model) // Buradan gelen verinin nereden geleceğini ifade ediyor [] içerisi
         {
-            Repository.Add(model);
-
-            return Redirect("/"); 
+            if(Repository.Applications.Any(c=> c.Email.Equals(model.Email)))
+            {
+                ModelState.AddModelError("","You have already applied.");
+            }
+            
+            if(ModelState.IsValid){
+                Repository.Add(model);
+                return View ("Feedback",model); 
+            }        
+            return View();
         }
            
     }
