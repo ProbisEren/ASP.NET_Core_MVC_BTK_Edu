@@ -5,7 +5,7 @@ using StoreApp.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<RepositoryContext>(options =>
+builder.Services.AddDbContext<RepositoryContext>(options => // ProductCOntroller.cs 12-20. satırları yazmamızı sağlıyo
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"));
 });
