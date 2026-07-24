@@ -1,28 +1,20 @@
-@using StoreApp.Models
+@{
+    Layout =  null;
+}
+
+
 @model List<Product>
 
-     
-Product
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    @foreach(Product prd in Model)
-    {
-         <div> 
-            <h3>@prd.ProductName</h3>
-            <p>@prd.ProductPrice</p>
-            <p>
-                <a href="Product/Get/@prd.ProductId">Get Details</a>
-            </p>
-         </div>
-    }
-</body>
-
-</html>
+@section Footer{
+    <div>Only For Index Footer</div>
+}
+    @foreach (Product prd in Model)
+{
+    <div>
+        <h3>@prd.ProductName</h3>
+        <p>@prd.ProductPrice</p>
+        <p>
+            <a href="Product/Get/@prd.ProductId">Get Details</a>
+        </p>
+    </div>
+}

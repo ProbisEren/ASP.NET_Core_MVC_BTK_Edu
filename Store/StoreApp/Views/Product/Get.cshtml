@@ -1,14 +1,10 @@
+
 @model StoreApp.Models.Product
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>@Model.ProductName</h3>
-    <p>@Model.ProductPrice</p>
-    <a href="/Product">Products</a>
-</body>
-</html>
+ 
+<h3>@Model.ProductName</h3>
+<p>@Model.ProductPrice</p>
+<a href="/Product">Products</a>
+
+@section Header{
+    <div>Only For Header From Section At Get</div>
+}
