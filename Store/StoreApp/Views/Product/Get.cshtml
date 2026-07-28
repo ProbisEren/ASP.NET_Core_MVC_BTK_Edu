@@ -3,8 +3,16 @@
  
 <h3>@Model.ProductName</h3>
 <p>@Model.ProductPrice</p>
-<a href="/Product">Products</a>
-
+<div class = "btn btn-group">
+    <a class="btn btn-primary" asp-controller="Home"asp-action="Index">
+        <i class="fa-regular fa-house"></i>
+        Home
+        </a>
+    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+        <i class="fa-solid fa-list"></i>
+    Products
+    </a>
+</div>
 @section Header{
     <div>Only For Header From Section At Get</div>
 }

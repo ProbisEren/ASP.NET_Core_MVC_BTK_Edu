@@ -1,20 +1,13 @@
-@{
-    Layout =  null;
-}
-
 
 @model List<Product>
 
 @section Footer{
     <div>Only For Index Footer</div>
 }
-    @foreach (Product prd in Model)
-{
-    <div>
-        <h3>@prd.ProductName</h3>
-        <p>@prd.ProductPrice</p>
-        <p>
-            <a href="Product/Get/@prd.ProductId">Get Details</a>
-        </p>
-    </div>
+
+<div class = "row my-3">
+@foreach (Product prd in Model)
+{    
+        <partial name="_ProductCard" model="prd" />    
 }
+</div>

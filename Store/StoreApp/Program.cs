@@ -12,6 +12,7 @@ builder.Services.AddDbContext<RepositoryContext>(options => // ProductCOntroller
  
 var app = builder.Build();
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 
